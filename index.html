@@ -1,1 +1,38 @@
-Hello World
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>跳转两个本地 HTML 页面</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 10px;
+    }
+    iframe {
+      width: 49%;
+      height: 90vh;
+      border: 1px solid #ccc;
+    }
+    #controls {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="controls">
+    <button onclick="loadPages()">跳转两个 HTML</button>
+  </div>
+
+  <iframe id="frame1"></iframe>
+  <iframe id="frame2"></iframe>
+
+  <script>
+    function loadPages() {
+      document.getElementById('frame1').src = 'page1.html';
+      document.getElementById('frame2').src = 'page2.html';
+    }
+  </script>
+
+</body>
+</html>
